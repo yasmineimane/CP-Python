@@ -10,16 +10,18 @@ def StringEndsWith(str, end):
     return str.endswith(end)
 
 # Square Every Digit
-def squareEveryDigit(num):
-    word = list(str(num)) 
-    for Char in word:  
-        print(int(Char)**2, end="")
+def square_digits(num):
+    result = ''
+    word = list(str(num))
+    for char in word:
+        result += str(int(char) ** 2)
+    return int(result)
 
 # Highest and Lowest
-def highestAndLowest(numbers):
+def high_and_low(numbers):
     numbers = [int(x) for x in numbers.split()]
 
-    return max(numbers), min(numbers)
+    return f"{max(numbers)} {min(numbers)}"
 
 # Get the Middle Character
 def getMiddle(string):
